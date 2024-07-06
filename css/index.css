@@ -1,0 +1,136 @@
+:root {
+    --soft-outline: solid 1px rgb(0 0 0 / 40%);
+    --soft-radius: 10px;
+    --soft-box-shadow: #00000059 0 5px 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Arial;
+    text-decoration: none;
+    color: black;
+    cursor: default;
+    overflow-x: hidden;
+}
+*[middle=""] {
+    padding: 0 10vw 0 10vw;
+    width: 80%;
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+cb {
+    color: blue;
+    font-weight: bold;
+}
+
+cg {
+    color: green;
+    font-weight: bold;
+}
+
+b {
+    text-decoration: underline;
+}
+
+topnav author {
+    display: block;
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+}
+
+topnav {
+    display: flex;
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--soft-box-shadow);
+    z-index: 999;
+    background-color: white;
+}
+topnav img {
+    height: 200px;
+    left: -50px;
+    position: absolute;
+}
+topnav a {
+    display: grid;
+    padding: 7px 12px;
+    border: var(--soft-outline);
+    border-radius: var(--soft-radius);
+    font-family: "Momcake";
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 3 0 3;
+    transition: .2s all;
+}
+topnav a:hover {
+    scale: 1.1;
+    background-color: black;
+    color: white;
+    box-shadow: var(--soft-box-shadow);
+}
+
+banner {
+    display: block;
+    position: relative;
+    background: url(/assets/banner.jpg);
+    background-size: contain;
+    background-repeat: round;
+    height: 46vw;
+    min-width: 100%;
+    top: 70px;
+}
+banner .container {
+    backdrop-filter: blur(5px) brightness(.7);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+banner .container .title {
+    display: block;
+    position: relative;
+    font-family: "Momcake";
+    color: white;
+    font-size: 10vw;
+    text-align: center;
+    width: 100%;
+    top: 15vw;
+}
+banner .container .subtitle {
+    display: block;
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    width: auto;
+    top: 15vw;
+    font-size: 2vw;
+}
+
+section {
+    display: block;
+    position: relative;
+    margin-top: 80px;
+}
+section .title {
+    text-align: center;
+    margin-top: 5vw;
+    font-size: 5vw;
+    font-family: "Momcake";
+}
+section .desc {
+    text-align: justify;
+    margin-top: 1vw;
+    font-size: 1.5vw;
+}
