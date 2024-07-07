@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 let a = document.createElement('a');
                 a.innerHTML = e.name;
                 a.href = e.href;
+                a.classList.add('button')
                 topnav.appendChild(a);
             });
         })
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
     
     // Load sections only if the page is home
-    if (window.location.pathname === '/') {
+    const path = window.location.pathname
+    if (path === '/' || path === '/index' || path === '/index.html') {
         // Load sections
         let section = document.querySelector('section');
         fetch('/API/sections.json').then(data => {

@@ -56,13 +56,14 @@ topnav {
     box-shadow: var(--soft-box-shadow);
     z-index: 999;
     background-color: white;
+    overflow: hidden;
 }
 topnav img {
     height: 200px;
     left: -50px;
     position: absolute;
 }
-topnav a {
+topnav .button {
     display: grid;
     padding: 7px 12px;
     border: var(--soft-outline);
@@ -73,11 +74,18 @@ topnav a {
     margin: 0 3 0 3;
     transition: .2s all;
 }
-topnav a:hover {
+topnav .button:hover {
     scale: 1.1;
     background-color: black;
     color: white;
     box-shadow: var(--soft-box-shadow);
+}
+topnav .cono {
+    display: block;
+    position: absolute;
+    left: 77px;
+    font-size: 11px;
+    bottom: 2px;
 }
 
 banner {
